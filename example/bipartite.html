@@ -1,0 +1,55 @@
+<!--
+
+The original example is from NPashaP: http://bl.ocks.org/NPashaP/9796212
+
+-->
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body,html{
+	margin:0;
+}
+
+svg text{
+	font-size:12px;
+}
+rect{
+	shape-rendering:crispEdges;
+}
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="../lib/affinetransform.js"></script>
+<script type="text/javascript" src="../lib/nmap.min.js"></script>
+<script type="text/javascript" src="../lib/nmap-squared.min.js"></script>
+<script type="text/javascript" src="../d3.layout.odmap.js"></script>
+<script src="../lib/biPartite.js"></script>
+<script>
+
+var width = 1100, height =600, margin ={b:0, t:40, l:270, r:50};
+
+d3.csv("data/data.csv", function(error, data){
+	od = d3.layout.odmap({
+		width:550,
+		height:550,
+		hand:true
+	});
+
+	od.data(data);
+
+	var d = od.bipartite();
+
+	var svg = d3.select("body")
+		.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
+		.append("g").attr("transform","translate("+ margin.l+","+margin.t+")");
+
+	var data = [ 
+		{data:bP.partData(d,2), id:'Origin-Destination', header:["Origin","Destination", "Commuters"]}
+	];
+
+	bP.draw(data, svg);
+});
+
+</script>
+</body>
