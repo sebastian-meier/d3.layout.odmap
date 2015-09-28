@@ -1,7 +1,7 @@
 # d3.layout.odmap
 d3 layout helper for origin-destination visualizations (od-maps). Using the helper one can switch between various visualizations without and data handling. Explore the examples here: http://prjcts.sebastianmeier.eu/odmap/example/index.html
 
-![Examples](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/overview.png)
+![Examples](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/overview.png)
 
 ## Data
 
@@ -41,7 +41,7 @@ var d = od.hand(od.hand());
 var d = od.sankey();
 var d = od.bipartite();
 ```
-![od-do](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/od-do.png)
+![od-do](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/od-do.png)
 
 Its easy to toggle between origin-destination and destination origin:
 
@@ -49,7 +49,7 @@ Its easy to toggle between origin-destination and destination origin:
 od.toggle();
 ```
 
-![InsideOut](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/insideout.png)
+![InsideOut](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/insideout.png)
 
 After calling the toggle function require the data again. The nested functions allow to request different layouts for outer and inner positions:
 
@@ -60,12 +60,12 @@ Take a look at the interactive explorer: http://prjcts.sebastianmeier.eu/odmap/e
 
 Most visualizations focus on the geographic space, but the layout also includes matrix and list views.
 
-![Matrix](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/matrix.png)
+![Matrix](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/matrix.png)
 
 And additionally data preparation for the biPartite plugin and the sankey plugin.
 
-![biPartite](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/bipartite.png)
+![biPartite](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/bipartite.png)
 http://prjcts.sebastianmeier.eu/odmap/example/bipartite.html
 
-![Sankey](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap.js/master/img/sankey.png)
+![Sankey](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/sankey.png)
 http://prjcts.sebastianmeier.eu/odmap/example/sankey.html
