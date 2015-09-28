@@ -41,21 +41,22 @@ var d = od.hand(od.hand());
 var d = od.sankey();
 var d = od.bipartite();
 ```
-![od-do](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/od-do.png)
-
 Its easy to toggle between origin-destination and destination origin:
 
 ```
 od.toggle();
 ```
+![od-do](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/od-do.png)
 
-![InsideOut](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/insideout.png)
 
 After calling the toggle function require the data again. The nested functions allow to request different layouts for outer and inner positions:
 
 ```
-var d = od.geo(od.grid());
+var d = od.geo(od.hand());
 ```
+
+![InsideOut](https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/insideout.png)
+
 Take a look at the interactive explorer: http://prjcts.sebastianmeier.eu/odmap/example/index.html
 
 Most visualizations focus on the geographic space, but the layout also includes matrix and list views.

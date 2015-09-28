@@ -50,22 +50,25 @@ var d = od.hand(od.hand());</p>
 var d = od.sankey();
 var d = od.bipartite();
 ```
-<img src="https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/od-do.png" alt="od-do" /></p>
-
-<p>Its easy to toggle between origin-destination and destination origin:</p>
+Its easy to toggle between origin-destination and destination origin:</p>
 
 <pre><code>od.toggle();
+</code></pre>
+
+<figure>
+<img src="https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/od-do.png" alt="od-do" />
+<figcaption>od-do</figcaption>
+</figure>
+
+<p>After calling the toggle function require the data again. The nested functions allow to request different layouts for outer and inner positions:</p>
+
+<pre><code>var d = od.geo(od.hand());
 </code></pre>
 
 <figure>
 <img src="https://raw.githubusercontent.com/sebastian-meier/d3.layout.odmap/master/img/insideout.png" alt="InsideOut" />
 <figcaption>InsideOut</figcaption>
 </figure>
-
-<p>After calling the toggle function require the data again. The nested functions allow to request different layouts for outer and inner positions:</p>
-
-<pre><code>var d = od.geo(od.grid());
-</code></pre>
 
 <p>Take a look at the interactive explorer: http://prjcts.sebastianmeier.eu/odmap/example/index.html</p>
 
